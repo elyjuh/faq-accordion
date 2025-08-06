@@ -107,6 +107,10 @@ summary {
     gap: 2rem;
 }
 
+summary::-webkit-details-marker {
+    display: none;              
+}
+
 span {
     font-size: 1rem;
     color: var(--purple-950);
