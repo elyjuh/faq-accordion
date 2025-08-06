@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: hsl(0, 100%, 100%);
+    --purple-100: hsl(275, 100%, 97%); 
+    --purple-500: hsl(277, 100%, 64%); 
+    --purple-600:  hsl(292, 16%, 49%);
+    --purple-700: hsl(275, 75%, 45%); 
+    --purple-900: hsl(275, 40%, 15%);  
+    --purple-950: hsl(292, 42%, 14%);
+
+    --fs-p: 16px;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+.background {
+    position: relative;
+    background-color: var(--purple-100);
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: .7rem;
+    padding: 2.3rem;
+    width: 100%;
+    max-width: 35.250rem;
+    height: auto;
+    box-shadow: 0 4px 20px hsla(275, 40%, 15%, 0.05);
+    gap: 1.5rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4rem;
+    color: var(--purple-950);
+}
+
+.heading h1 {
+    font-size: 3rem;
+}
+
+.icon-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-toggle .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.plus-icon {
+    opacity: 1;
+}
+
+.minus-icon {
+    opacity: 0;
+}
+
+details {
+    width: 100%;
+    border-bottom: 1px solid hsla(275, 40%, 15%, 0.1);
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.details-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    opacity: 0;
+}
+
+details[open] .details-content {
+    max-height: fit-content;
+    opacity: 1;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--fw-600);
+    list-style: none;
+    gap: 2rem;
+}
+
+span {
+    font-size: 1rem;
+    color: var(--purple-950);
+    transition: color .3s ease;
+}
+
+span:hover {
+    color: var(--purple-500)
+}
+
+p {
+    font-size: var(--fs-p);
+    color: var(--purple-600);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+.detail-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
