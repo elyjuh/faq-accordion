@@ -1,14 +1,11 @@
 document.querySelectorAll("details").forEach(detail => {
-    const plusIcon = detail.querySelector(".plus-icon");
-    const minusIcon = detail.querySelector(".minus-icon");
+    const icon = detail.querySelector(".detail-icon");
 
     detail.addEventListener("toggle", () => {
         if (detail.open) {
-            plusIcon.style.opacity = "0";
-            minusIcon.style.opacity = "1";
+            icon.src =  "assets/images/icon-minus.svg";
         } else {
-            plusIcon.style.opacity = "1";
-            minusIcon.style.opacity = "0";
+            icon.src =  "assets/images/icon-plus.svg";
         }
     });
 });

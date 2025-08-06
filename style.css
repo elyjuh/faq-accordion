@@ -9,7 +9,7 @@
     --purple-900: hsl(275, 40%, 15%);  
     --purple-950: hsl(292, 42%, 14%);
 
-    --fs-p: 16px;
+    --fs-p: 1rem;
     --fw-400: 400;
     --fw-600: 600;
     --fw-700: 700;
@@ -69,29 +69,6 @@ main {
     font-size: 3rem;
 }
 
-.icon-toggle {
-    position: relative;
-    width: 24px;
-    height: 24px;
-}
-
-.icon-toggle .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s ease;
-}
-
-.plus-icon {
-    opacity: 1;
-}
-
-.minus-icon {
-    opacity: 0;
-}
-
 details {
     width: 100%;
     border-bottom: 1px solid hsla(275, 40%, 15%, 0.1);
@@ -107,6 +84,10 @@ details {
     overflow: hidden;
     transition: max-height 0.3s ease;
     opacity: 0;
+}
+
+details[open] .detail-icon {
+    transform: rotate(180deg);
 }
 
 details[open] .details-content {
@@ -148,5 +129,34 @@ p {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
+@media (max-width: 769px) {
+    .background {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+        background-size: contain;
+        padding: 2rem 1.5rem;
+    }
+
+    main {
+        padding: 1.8rem;
+    }
+
+    .heading h1 {
+        font-size: 2.2rem;
+    }
+
+    span {
+        font-size: 0.95rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .detail-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
