@@ -52,7 +52,7 @@ main {
     border-radius: .7rem;
     padding: 2.3rem;
     width: 100%;
-    max-width: 35.250rem;
+    max-width: 37.250rem;
     height: auto;
     box-shadow: 0 4px 20px hsla(275, 40%, 15%, 0.05);
     gap: 1.5rem;
@@ -66,7 +66,7 @@ main {
 }
 
 .heading h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 details {
@@ -112,7 +112,7 @@ summary::-webkit-details-marker {
 }
 
 span {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--purple-950);
     transition: color .3s ease;
 }
@@ -127,11 +127,12 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
     word-break: break-word;
+    line-height: 1.5rem;
 }
 
 .detail-icon {
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
